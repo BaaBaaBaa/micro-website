@@ -1,0 +1,54 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "member-access": false,
+    "no-var-requires": false,
+    "no-console": false,
+    "arrow-parens": false,
+    "no-empty": false,
+    "interface-name": false,
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "no-var-keyword":true,// 不允许使用var
+    "comment-format":[true, "check-space"],// 定义注释格式
+    // 禁止自动检测末尾行必须使用逗号
+    "trailing-comma": [true, {
+      "singleline": "never",
+      "multiline": {
+        "objects": "ignore",
+        "arrays": "always",
+        "functions": "never",
+        "typeLiterals": "ignore"
+      }
+    }],
+    "no-trailing-whitespace": [// 不允许空格结尾
+      true,
+      "ignore-comments",
+      "ignore-jsdoc"
+    ],
+    "whitespace": [
+      "check-branch",// check分支语句（if/ else/ for/ while）后跟空白。
+      "check-decl",// 检查变量声明在equals标记周围是否有空格。
+      "check-operator",//  检查操作符周围的空格。
+      "check-module",//  检查导入和导出语句中的空格。
+      "check-separator",// 在分隔符（,/ ;）之后检查空格。
+      "check-rest-spread",// 检查是否在休息/展开运算符（...）之后没有空格。
+      "check-type",// 在变量类型指定之前检查空格。
+      "check-typecast",// 检查类型转换及其目标之间的空格。
+      "check-type-operator",// 检查类型运算符|和&。之间的空格。
+      "check-preblock",// 在块的大括号之前检查空格。
+      "check-postbrace"// 在大括号后面检查空格
+    ],
+    "quotemark": [true, "single"]
+  }
+}
