@@ -1,5 +1,9 @@
 <template>
-  <p>Solution works!</p>
+  <div>
+    <p><img class="icon icon-productActive" alt=""></p>
+    <p><img src="../assets/icon/productActive.png" alt=""></p>
+    <img src="../assets/images/sprite.png" alt="">
+  </div>
 </template>
 
 <script lang="ts">

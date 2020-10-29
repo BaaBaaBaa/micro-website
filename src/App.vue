@@ -15,8 +15,8 @@
 
   @Component({
     components: {
-      [Tabbar.name]: Tabbar,
-      [TabbarItem.name]: TabbarItem
+      Tabbar,
+      TabbarItem
     },
   })
   export default class App extends Vue {
@@ -25,6 +25,7 @@
 </script>
 
 <style lang="scss">
+  @import './assets/css/sprite.scss';
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
