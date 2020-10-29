@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p><img class="icon icon-productActive" alt=""></p>
+    <span class="icon icon-productActive"></span>
     <p><img src="../assets/icon/productActive.png" alt=""></p>
     <img src="../assets/images/sprite.png" alt="">
   </div>
@@ -13,7 +13,7 @@
     components: {},
   })
   export default class Solution extends Vue {
-    private active: number = 0;
+
   }
 </script>
 

@@ -5,11 +5,16 @@ const SpritesmithPlugin = require('webpack-spritesmith');
 // const merge = require("webpack-merge");
 // const tsImportPluginFactory = require("ts-import-plugin");
 
-var templateFunction = function (data) {
-  var shared = '.icon { background-image: url(I);background-size: Wpx Hpx;}'.replace('I', data.sprites[0].image).replace('W', data.spritesheet.width)
-    .replace('H', data.spritesheet.height)
+const templateFunction = data => {
+  const shared = `.icon {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    background-image: url(${data.sprites[0].image});
+    background-size: ${data.spritesheet.width}px ${data.spritesheet.height}px;
+  }`;
 
-  var perSprite = data.sprites.map(function (sprite) {
+  const perSprite = data.sprites.map(function (sprite) {
     return '.icon-N { width: Wpx; height: Hpx; background-position: Xpx Ypx; }'
       .replace('N', sprite.name)
       .replace('W', sprite.width)
@@ -87,7 +92,7 @@ module.exports = {
         plugins: [
           autoPreFixer(),
           px2rem({
-            rootValue: 75, //基准值(计算公式：设计图宽度/10)，设计图尺寸为750X1134(iPhone6)，基准值为750/10=75
+            rootValue: 75, //基准值(计算公式：设计图宽度/10)，基准值为750/10=75
             propList: ['*']
           })
         ]
